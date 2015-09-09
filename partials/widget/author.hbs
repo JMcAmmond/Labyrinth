@@ -1,0 +1,32 @@
+{{#if author.bio}}
+    <div class="author widget wow {{animation}}">
+        {{#author}}
+            <div class="row">
+                <div class="col-md-3">
+                    {{#if image}}
+                        <img class="img-responsive" src="{{image}}" alt="{{name}} - Profile Picture"/>
+                    {{/if}}
+                </div>
+                <div class="col-md-9">
+                    <h4 class="title">About <a href="{{url}}">{{name}}</a></h4>
+                    <p class="details">
+                        {{#if location}}
+                            <span>
+                                <i class="fa fa-map-marker"></i>
+                                {{location}}
+                            </span>
+                        {{/if}}
+
+                        {{#if website}}
+                            <span>
+                                <i class="fa fa-globe"></i>
+                                <a href="{{website}}">Website</a>
+                            </span>
+                        {{/if}}
+                    </p>
+                    <p>{{bio}}</p>
+                </div>
+            </div>
+        {{/author}}
+    </div>
+{{/if}}

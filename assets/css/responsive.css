@@ -1,0 +1,12 @@
+@media only screen and (min-width: 768px) {
+  .parallax-container-full {
+    height: 100vh;
+    min-height: 500px;
+  }
+  .parallax-container {
+    height: 500px;
+  }
+  .page-header .logo h1 {
+    font-size: 5rem;
+  }
+}

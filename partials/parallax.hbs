@@ -1,0 +1,67 @@
+<section class="{{#is 'home'}}parallax-container-full{{else}}parallax-container{{/is}}">
+    <div class="parallax">
+        {{#is 'index, tag'}}
+            <img src="{{@blog.cover}}">
+        {{/is}}
+
+        {{#is 'post, page'}}
+            {{#if image}}
+                <img src="{{image}}">
+            {{else}}
+                <img src="{{@blog.cover}}">
+            {{/if}}
+        {{/is}}
+
+        {{#is 'author'}}
+            {{#if author.cover}}
+                <img src="{{author.cover}}">
+            {{else}}
+                <img src="{{@blog.cover}}">
+            {{/if}}
+        {{/is}}
+    </div>
+
+
+    <div class="page-header container">
+        <div class="logo wow fadeIn {{#is 'author'}}author{{/is}}" {{^is 'home'}}style="height: 100%;"{{/is}}>
+            {{#is 'index, tag, post, page'}}
+                {{#if @blog.logo}}
+                    <img class="img-responsive" src="{{@blog.logo}}" alt="{{@blog.title}}"/>
+                {{else}}
+                    <h1>{{@blog.title}}</h1>
+                {{/if}}
+            {{/is}}
+
+            {{#is 'author'}}
+                {{#if author.image}}
+                    <img class="img-responsive img-circle" src="{{author.image}}" alt="{{author.name}}"/>
+                    <div class="hidden-xs">
+                        <h2>{{author.name}}</h2>
+                        {{#if author.bio}}
+                            <p>{{author.bio}}</p>
+                        {{/if}}
+                        {{#if author.location}}
+                            <span><i class="fa fa-map-marker"></i>{{author.location}}</span>
+                        {{/if}}
+                        {{#if author.website}}
+                            <span><i class="fa fa-globe"></i><a href="{{website}}">Website</a></span>
+                        {{/if}}
+                    </div>
+                {{else}}
+                    {{#if @blog.logo}}
+                        <img class="img-responsive" src="{{@blog.logo}}" alt="{{@blog.title}}"/>
+                    {{else}}
+                        <h1>{{@blog.title}}</h1>
+                    {{/if}}
+                {{/if}}
+            {{/is}}
+        </div>
+
+        {{#is 'home'}}
+            <a class="hidden-xs next-section scroll" href="#content">
+                <i class="fa fa-chevron-down wow bounce" data-wow-delay="3s" data-wow-duration="1.5s"></i>
+            </a>
+        {{/is}}
+    </div>
+</section>
+

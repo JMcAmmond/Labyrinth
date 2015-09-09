@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="title" content="{{meta_title}}" />
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/animate.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/global.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{asset "css/ie/v8.css"}}" /><![endif]-->
+
+    <script type="text/javascript">
+        {{> custom/config}}
+    </script>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+    {{! Inject header for all pages }}
+    {{> header}}
+
+    {{! Everything gets inserted here }}
+    {{{body}}}
+
+    {{! Inject footer for all pages }}
+    {{> footer}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+
+    {{! The main JavaScript files }}
+    <!--[if lte IE 8]><script src="{{asset "css/ie/html5shiv.js"}}"></script><![endif]-->
+    <script type="text/javascript" src="{{asset "js/vendor/jquery-2.1.4.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/wow.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/materialize.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/highlight.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/vendor/jquery.fitvids.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/labyrinth.js"}}"></script>
+    <script type="text/javascript">
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{{#if subscriptionURL}}
+    <div class="widget wow {{animation}}">
+        {{#if title}}
+            <h4 class="title">{{title}}</h4>
+        {{/if}}
+
+        {{#if body}}
+            <p>{{{body}}}</p>
+        {{/if}}
+
+        <form action="{{subscriptionURL}}" method="post">
+            <input type="email" placeholder="Enter your email..."/>
+            <button class="primary full-width">
+                {{#if buttonText}}
+                    {{buttonText}}
+                {{else}}
+                    Submit
+                {{/if}}
+            </button>
+        </form>
+    </div>
+{{/if}}

@@ -1,0 +1,336 @@
+@import 'helpers/mixins';
+@import 'helpers/colours';
+@import 'highlight.min.less';
+@import "global";
+
+
+/*********************************************************************
+*						    Header / Navigation
+*********************************************************************/
+//Hamburger
+header.blog-header {
+  position: relative;
+
+  nav {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+	.hamburger-container {
+	  cursor: pointer;
+	  position: absolute;
+	  width: 60px;
+	  height: 60px;
+	  border-radius: 50%;
+	  background-color: @hamburger-background;
+	  top: 2rem;
+	  right: 2rem;
+	  z-index: 200;
+
+	  .hamburger {
+		.radius(10px);
+		.transform-transXY(-50%);
+		.transition(background-color, 0.3s, linear);
+		background-color: @hamburger;
+		height: 3px;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		width: 30px;
+
+		&:before, &:after {
+		  .radius(10px);
+		  -webkit-transition: transform 0.3s linear, top 0.3s linear, bottom 0.3s linear;
+		  -moz-transition: transform 0.3s linear, top 0.3s linear, bottom 0.3s linear;
+		  -o-transition: transform 0.3s linear, top 0.3s linear, bottom 0.3s linear;
+		  -ms-transition: transform 0.3s linear, top 0.3s linear, bottom 0.3s linear;
+		  transition: transform 0.3s linear, top 0.3s linear, bottom 0.3s linear;
+
+		  background-color: @hamburger !important;
+		  content: '';
+		  height: inherit;
+		  position: absolute;
+		  width: inherit;
+		}
+		&:before { top: -8px }
+		&:after { bottom: -8px }
+	  }
+	}
+  }
+}
+
+//Navigation Panel
+nav {
+  ul.nav {
+	.box-shadow (0, 0, 10px, 0.3);
+	.transition(transform, 0.3s, linear);
+	.transform-tranX(105%);
+
+	background-color: @nav-menu-background;
+	height: 100vh;
+	margin: 0;
+	overflow: auto;
+	padding: 100px 0 0 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 100vw;
+	max-width: 350px;
+	z-index: 100;
+
+	li {
+	  font-size: 1.5rem;
+	  list-style: none;
+	  margin: 1rem;
+	}
+
+	.subscribe-button {
+	  position: absolute; bottom: 10vh; left: 0;
+	  width: 100%;
+	}
+  }
+
+  &.active {
+	ul.nav { .transform-tranX(0); }
+
+	.hamburger {
+	  background-color: @nav-menu-background !important;
+
+	  &:before {
+		background-color: @hamburger !important;
+		top: 0 !important;
+		transform: rotate(45deg);
+	  }
+	  &:after {
+		background-color: @hamburger !important;
+		bottom: 0 !important;
+		transform: rotate(-45deg);
+	  }
+	}
+  }
+}
+
+
+
+
+/*********************************************************************
+*  						        Page Header
+*********************************************************************/
+.page-header {
+  .logo {
+	.transform-transXY();
+	padding: 3rem;
+	position: absolute; top: 50%; left: 50%;
+	width: 100%;
+
+	h1 {
+	  color: #FFFFFF;
+	  font-size: 3rem;
+	  font-weight: bold;
+	  text-align: center;
+	  width: 90vw;
+	}
+
+	img {
+	  margin: 0 auto;
+	  max-height: 100%;
+	  max-width: 100%;
+	  padding: 2rem;
+	}
+  }
+  .next-section {
+	color: #FFFFFF;
+	font-size: 3rem;
+	position: absolute; bottom: 5rem; left: 50%;
+	text-align: center;
+	width: 60px; margin-left: -30px;
+  }
+
+  .author {
+	color: #FFFFFF;
+	font-weight: normal;
+	text-align: center;
+
+	img {
+	  border: 3px solid rgba(255,255,255,1);
+	  max-width: 15rem;
+	  padding: 0;
+	}
+
+	h2 {
+	  font-size: 3rem;
+	  margin: 0.5rem;
+	}
+
+	p {
+	  margin: 1rem auto 1rem auto;
+	  max-width: 50rem;
+	}
+
+	span {
+	  font-size: 1rem;
+	  margin: 0 0.5rem;
+
+	  i { margin-right: 0.5rem; }
+	  a {
+		color: #FFFFFF;
+		text-decoration: underline;
+	  }
+	}
+  }
+}
+
+
+
+
+/*********************************************************************
+*  						          Footer
+*********************************************************************/
+body > footer {
+  background-color: @footer-background;
+  text-align: center;
+}
+
+
+
+
+/*********************************************************************
+*  						   Article Widget Box
+*********************************************************************/
+.widget, article {
+  .box-shadow-solid(1px, 1px, 4px, #d0d0d0);
+  background-color: @article-widget-background;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+/*********************************************************************
+*  						        Widgets
+*********************************************************************/
+.widget {
+  h4.title {
+	margin: 0 0 1rem 0;
+	position: relative;
+
+	&:after {
+	  border-bottom: 1px solid rgba(0,0,0,0.1);
+	  content: '';
+	  position: absolute; bottom: -1rem; left: 0;
+	  width: 100%;
+	}
+  }
+
+  h4.title + * { margin-top: 2rem;}
+
+  form {
+	* { margin: 0.5rem 0; }
+  }
+}
+
+
+
+
+/*********************************************************************
+*  						        Article
+*********************************************************************/
+article {
+  * {max-width: 100%;}
+
+  .row > div {
+	margin-bottom: 1rem;
+  }
+
+  header {
+	text-align: center;
+
+	h2 { margin: 0; }
+
+	p {
+	  margin: 0.5rem 0 1rem 0;
+
+	  span{
+		color: rgba(0,0,0,0.7);
+		font-size: 0.9rem;
+		font-weight: normal;
+
+		&:after {
+		  content: '\f111';
+		  color: rgba(0, 0, 0, 0.7);
+		  font-family: FontAwesome;
+		  font-size: 0.35rem;
+		  padding: 0 0.75rem;
+		  vertical-align: middle;
+		}
+		&:last-child:after { content: none; }
+	  }
+	}
+  }
+
+  section {
+	line-height: 1.5rem;
+  }
+}
+
+
+
+
+/*********************************************************************
+*  						       Share Post
+*********************************************************************/
+.share-post {
+  text-align: center;
+
+  i {
+	font-size: 2rem;
+	width: 3rem;
+  }
+
+  p { margin-top: 0; margin-bottom: 0.5rem; }
+}
+
+
+
+
+/*********************************************************************
+*  						         Author
+*********************************************************************/
+.author {
+  img {
+	.radius(50%);
+	margin: 0 auto 1rem auto;
+	max-width: 10rem;
+  }
+
+  .details {
+	color: rgba(0,0,0,0.7);
+	font-style: italic;
+
+	span:first-child {margin-right: 1rem;}
+  }
+}
+
+
+
+
+/*********************************************************************
+*  						       Pagination
+*********************************************************************/
+.pages-1 {
+  display: none;
+}
+nav.pagination {
+  text-align: center;
+
+  .newer-posts, .older-posts {
+	position: absolute;
+	padding: 0 1.5rem;
+  }
+  .newer-posts { left: 0; }
+  .older-posts { right: 0; }
+}

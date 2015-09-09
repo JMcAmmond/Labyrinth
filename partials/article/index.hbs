@@ -1,0 +1,35 @@
+{{#foreach posts}}
+    <article id="{{id}}" class="{{post_class}} wow fadeIn">
+        <header>
+            <h2><a href="{{url}}">{{{title}}}</a></h2>
+            <p>
+                <em>
+                    <span>By {{author}}</span>
+                    <span>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+                            {{date format="MMMM, DD YYYY"}}
+                        </time>
+                    </span>
+                    <span><a href="{{url}}#disqus_thread">Comments</a></span>
+                </em>
+            </p>
+        </header>
+        <section>
+            {{#if image}}
+                <div class="parallax-container-featured">
+                    <div class="parallax">
+                        <img src="{{image}}">
+                    </div>
+                </div>
+            {{/if}}
+            <p>{{excerpt words="100"}}...</p>
+            <p><a class="read-more" href="{{url}}"><button class="btn-primary">Continue Reading</button></a></p>
+        </section>
+        <footer>
+            {{#if tags}}
+                <hr/>
+                <i class="fa fa-tags"></i> {{tags}}
+            {{/if}}
+        </footer>
+    </article>
+{{/foreach}}

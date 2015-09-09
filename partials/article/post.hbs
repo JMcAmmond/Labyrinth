@@ -1,0 +1,40 @@
+<article id="{{id}}" class="{{post_class}} wow fadeIn">
+    <header>
+        <h2><a href="{{url}}">{{{title}}}</a></h2>
+        <p>
+            <em>
+                <span>By {{author}}</span>
+                    <span>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+                            {{date format="MMMM, DD YYYY"}}
+                        </time>
+                    </span>
+                <span>
+                    <a href="{{url}}#disqus_thread">Comments</a>
+                </span>
+            </em>
+        </p>
+    </header>
+    <section>
+        <p>{{content}}</p>
+    </section>
+    <footer>
+        {{#if tags}}
+            <hr/>
+            <i class="fa fa-tags"></i> {{tags}}
+        {{/if}}
+    </footer>
+</article>
+
+{{> widget/share-post
+    title="Share This Post"
+    animation="fadeIn"
+}}
+
+{{> widget/author
+    animation="fadeIn"
+}}
+
+{{> widget/comments
+    animation="fadeIn"
+}}
