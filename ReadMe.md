@@ -1,27 +1,18 @@
 # Labyrinth
-Theme is still a work in progress
+Labyrinth is a Theme build for the Ghost blogging platform. This theme is still a work in progress.
 
-
+![Labyrinth Mockup Home](https://raw.github.com/JMcAmmond/Labyrinth/blob/master/assets/img/mockup.jpg)
 
 
 ## Version
-0.0.0
-
-## Attributions & Credits
-
-* [jQuery](https://jquery.com/)
-* [Fontawesome](http://fontawesome.io)
-* [Bootstrap 3.3.2](http://getbootstrap.com)
-* [Highlightjs](https://highlightjs.org/)
-* [Materialize](http://materializecss.com/)
-* [WowJS](http://mynameismatthieu.com/WOW/)
-* [AnimateCSS](https://daneden.github.io/animate.css/)
-* [FitVids](http://fitvidsjs.com/)
+0.1.0
 
 
 ## Installation
 
-Unzip labyrinth.zip and place folder inside `/content/themes` directory
+1. Download the theme from GitHub
+2. Upload the theme following the directions in the [Ghost Documentation](http://docs.ghost.org/usage/settings/)
+
 
 ## Widgets 
 Animations options: https://daneden.github.io/animate.css/
@@ -118,4 +109,19 @@ Animations options: https://daneden.github.io/animate.css/
 
 
 ### Customizing Colour Scheme
-This theme was developed using LESS. All colours have been placed in the assets/css/helpers/colours.less directory. To change the colours of the theme simply change the colour code in the less file, recompile the code and minify it. 
+This theme was developed using LESS. All colours have been placed in the assets/css/helpers/colours.less directory. To change the colours of the theme simply change the colour code in the less file, recompile the code and minify it.
+ 
+ 
+## Attributions & Credits
+
+* [jQuery](https://jquery.com/)
+* [Fontawesome](http://fontawesome.io)
+* [Bootstrap 3.3.2](http://getbootstrap.com)
+* [Highlightjs](https://highlightjs.org/)
+* [Materialize](http://materializecss.com/)
+* [WowJS](http://mynameismatthieu.com/WOW/)
+* [AnimateCSS](https://daneden.github.io/animate.css/)
+* [FitVids](http://fitvidsjs.com/)
+
+## More ScreenShots
+![Labyrinth Mockup Full View](https://raw.github.com/JMcAmmond/Labyrinth/blob/master/assets/img/fullview.png)
