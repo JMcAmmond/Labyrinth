@@ -10,11 +10,13 @@ Theme is still a work in progress
 ## Attributions & Credits
 
 * [jQuery](https://jquery.com/)
-* [Modernizr](http://modernizr.com/)
 * [Fontawesome](http://fontawesome.io)
 * [Bootstrap 3.3.2](http://getbootstrap.com)
 * [Highlightjs](https://highlightjs.org/)
-* Preview Images from [Stokpic](http://stokpic.com/)
+* [Materialize](http://materializecss.com/)
+* [WowJS](http://mynameismatthieu.com/WOW/)
+* [AnimateCSS](https://daneden.github.io/animate.css/)
+* [FitVids](http://fitvidsjs.com/)
 
 
 ## Installation
