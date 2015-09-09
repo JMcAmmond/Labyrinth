@@ -1,11 +1,11 @@
 # Labyrinth
-
+Theme is still a work in progress
 
 
 
 
 ## Version
-1.0.0
+0.0.0
 
 ## Attributions & Credits
 
