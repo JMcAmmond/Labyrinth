@@ -1,7 +1,7 @@
 # Labyrinth
 Labyrinth is a Theme build for the Ghost blogging platform. This theme is still a work in progress.
 
-![Labyrinth Mockup Home](https://raw.github.com/JMcAmmond/Labyrinth/blob/master/assets/img/mockup.jpg)
+![Labyrinth Mockup Home](https://raw.githubusercontent.com/JMcAmmond/Labyrinth/master/assets/img/mockup.jpg)
 
 
 ## Version
@@ -124,4 +124,4 @@ This theme was developed using LESS. All colours have been placed in the assets/
 * [FitVids](http://fitvidsjs.com/)
 
 ## More ScreenShots
-![Labyrinth Mockup Full View](https://raw.github.com/JMcAmmond/Labyrinth/blob/master/assets/img/fullview.png)
+![Labyrinth Mockup Full View](https://raw.githubusercontent.com/JMcAmmond/Labyrinth/master/assets/img/fullview.png)
