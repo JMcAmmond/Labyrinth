@@ -1,5 +1,6 @@
 # Labyrinth
-Labyrinth is a Theme build for the Ghost blogging platform. This theme is still a work in progress.
+Labyrinth is a theme build for the Ghost blogging platform. This theme features a full screen parallax header on the home page and parallax feature images on posts.  
+This theme is still a work in progress.
 
 ![Labyrinth Mockup Home](https://raw.githubusercontent.com/JMcAmmond/Labyrinth/master/assets/img/mockup.jpg)
 
@@ -11,49 +12,16 @@ Labyrinth is a Theme build for the Ghost blogging platform. This theme is still 
 ## Installation
 
 1. Download the theme from GitHub
-2. Upload the theme following the directions in the [Ghost Documentation](http://docs.ghost.org/usage/settings/)
+2. Upload the theme following the directions in the [Ghost Documentation](http://docs.ghost.org/usage/settings/).
+3. Configure variables inside `partials/custom/config.hbs` and `partials/custom/widgets-sidebar.hbs`.
+4. Remove/reorganize the widget placement inside `partials/custom/widgets-sidebar.hbs` however you wish them to appear on the page.
 
 
 ## Widgets 
-Animations options: https://daneden.github.io/animate.css/
+All widgets are inside the `partials/widget` directory. Each widget may be called anywhere on the page provided it is called with the required parameters
+and following any special instructions given. (etc. comment widget must be container within `{{#post}}{{/post}}` block and disqus variable must be configured.)
 
 ### Available Widgets:
-##### Name: follow
-* Mandatory Variables: 
-    * none
-* Special Instructions: 
-    * Simply changing a social media variable to false will stop it from showing on the page
-* Variables:
-
-    | Variable Name       | Expected      | Default                  |
-    | ------------------- |---------------| -------------------------|
-    | animation:          | String        | fadeIn                   |
-    | title:              | string        | Follow                   |
-    | facebook:           | boolean       | true                     |
-    | facebookURL:        | string        | http://facebook.com      |
-    | google:             | boolean       | true                     |
-    | googleURL:          | string        | http://plus.google.com   |
-    | twitter:            | boolean       | true                     |
-    | twitterURL:         | string        | http://twitter.com       |
-    | dribbble:           | boolean       | true                     |
-    | dribbbleURL:        | string        | http://dribbble.com      |
-    | instagram:          | boolean       | true                     |
-    | instagramURL:       | string        | http://instagram.com     |
-    | github:             | boolean       | true                     |
-    | githubURL:          | string        | http://github.com        |
-    | youtube:            | boolean       | true                     |
-    | youtubeURL:         | string        | http://youtube.com       |
-    | pinterest:          | boolean       | true                     |
-    | pinterestURL:       | string        | http://pinterest.com     |
-    | linkedin:           | boolean       | true                     |
-    | linkedinURL:        | string        | http://linkedin.com      |
-    | skype:              | boolean       | true                     |
-    | skypeURL:           | string        | http://skype.com         |
-    | tumblr:             | boolean       | true                     |
-    | tumblrURL:          | string        | http://tumblr.com        |
-    | rss:                | boolean       | true                     |
-
-
 ##### Name: newsletter
 * Mandatory Variables: 
     * subscriptionURL
@@ -61,13 +29,13 @@ Animations options: https://daneden.github.io/animate.css/
     * none
 * Variables:
 
-    | Variable Name       | Expected      | Default                       |
-    | ------------------- |---------------| ------------------------------|
-    | animation:          | String        | fadeIn                        |
-    | title:              | string        | Newsletter                    |
-    | body:               | string        | Subscribe to our news letter! |
-    | subscriptionURL:    | string        | #                             |
-    | buttonText:         | string        | Subscribe                     |
+| Variable Name       | Expected      | Default                       | Mandatory     |
+|---------------------|---------------|-------------------------------|---------------|
+| title:              | string        |                               | false         |
+| body:               | string        |                               | false         |
+| subscriptionURL:    | string        |                               | true          |
+| buttonText:         | string        | Submit                        | false         |
+
 
 
 ##### Name: text
@@ -77,11 +45,11 @@ Animations options: https://daneden.github.io/animate.css/
     * none
 * Variables:
 
-    | Variable Name       | Expected      | Default                       |
-    | ------------------- |---------------| ------------------------------|
-    | animation:          | String        | fadeIn                        |
-    | title:              | string        |                               |
-    | body:               | string/html   |                               |
+| Variable Name       | Expected      | Default                       | Mandatory     |
+|---------------------|---------------|-------------------------------|---------------|
+| title:              | string        |                               | false         |
+| body:               | string/html   |                               | true          |
+
 
 
 ##### Name: comments
@@ -91,21 +59,72 @@ Animations options: https://daneden.github.io/animate.css/
     * Must be contained with in `{{#post}}{{/post}}` block and disqus variable must be entered into 'custom/config.hbs'
 * Variables:
 
-    | Variable Name       | Expected      | Default                       |
-    | ------------------- |---------------| ------------------------------|
-    | animation:          | String        | fadeIn                        |
+| Variable Name       | Expected      | Default                       | Mandatory     |
+|---------------------|---------------|-------------------------------|---------------|
+|                     |               |                               |               |
+
 
 
 ##### Name: author
 * Mandatory Variables: 
     * none
 * Special Instructions: 
-    * Widget will only show if author has a bio
+    * Widget will only show if author has a bio. This information is entered in on the ghost settings panel.
 * Variables:
 
-    | Variable Name       | Expected      | Default                       |
-    | ------------------- |---------------| ------------------------------|
-    | animation:          | String        | fadeIn                        |
+| Variable Name       | Expected      | Default                       | Mandatory     |
+|---------------------|---------------|-------------------------------|---------------|
+|                     |               |                               |               |
+
+
+
+##### Name: share-post
+* Mandatory Variables: 
+    * none
+* Special Instructions: 
+    * none
+* Variables:
+
+| Variable Name       | Expected      | Default                       | Mandatory     |
+|---------------------|---------------|-------------------------------|---------------|
+| title               | string        |                               | false         |
+
+
+
+##### Name: follow
+* Mandatory Variables: 
+    * none
+* Special Instructions: 
+    * Simply changing a social media variable to false will stop it from showing on the page
+* Variables:
+
+| Variable Name       | Expected      | Default                       | Mandatory     |
+|---------------------|---------------|-------------------------------|---------------|
+| title:              | string        |                               | false         |
+| facebook:           | boolean       |                               | false         |
+| facebookURL:        | string        |                               | false         |
+| google:             | boolean       |                               | false         |
+| googleURL:          | string        |                               | false         |
+| twitter:            | boolean       |                               | false         |
+| twitterURL:         | string        |                               | false         |
+| dribbble:           | boolean       |                               | false         |
+| dribbbleURL:        | string        |                               | false         |
+| instagram:          | boolean       |                               | false         |
+| instagramURL:       | string        |                               | false         |
+| github:             | boolean       |                               | false         |
+| githubURL:          | string        |                               | false         |
+| youtube:            | boolean       |                               | false         |
+| youtubeURL:         | string        |                               | false         |
+| pinterest:          | boolean       |                               | false         |
+| pinterestURL:       | string        |                               | false         |
+| linkedin:           | boolean       |                               | false         |
+| linkedinURL:        | string        |                               | false         |
+| skype:              | boolean       |                               | false         |
+| skypeURL:           | string        |                               | false         |
+| tumblr:             | boolean       |                               | false         |
+| tumblrURL:          | string        |                               | false         |
+| rss:                | boolean       |                               | false         |
+
 
 
 ### Customizing Colour Scheme
