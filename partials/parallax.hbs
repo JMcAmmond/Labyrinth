@@ -37,15 +37,19 @@
                     <img class="img-responsive img-circle" src="{{author.image}}" alt="{{author.name}}"/>
                     <div class="hidden-xs">
                         <h2>{{author.name}}</h2>
+
                         {{#if author.bio}}
                             <p>{{author.bio}}</p>
                         {{/if}}
+
                         {{#if author.location}}
                             <span><i class="fa fa-map-marker"></i>{{author.location}}</span>
                         {{/if}}
+
                         {{#if author.website}}
                             <span><i class="fa fa-globe"></i><a href="{{website}}">Website</a></span>
                         {{/if}}
+
                     </div>
                 {{else}}
                     {{#if @blog.logo}}
