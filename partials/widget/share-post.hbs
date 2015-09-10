@@ -1,6 +1,6 @@
-<div class="widget wow {{animation}}">
+<div class="widget wow fadeIn">
     <div class="share-post social-icons">
-        <p>{{title}}</p>
+        {{#if title}}<p>{{title}}</p>{{/if}}
         <a href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}" target="_blank"
            onclick="window.open(this.href, 'facebook-share', 'width=550,height=235');return false;">
             <i class="fa fa-facebook-square"></i>
