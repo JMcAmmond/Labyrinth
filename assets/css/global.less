@@ -25,23 +25,45 @@ body {
   overflow-x: hidden;
 }
 
-p { margin: 1rem 0; }
+p {
+  margin: 1rem 0;
+}
 
-h1, h2, h3, h4, h5, h6 {font-weight: normal; text-transform: capitalize;}
-h1 {font-size: 3rem;}
-h2 {font-size: 2.25rem;}
-h3 {font-size: 1.75rem;}
-h4 {font-size: 1.5rem;}
-h5 {font-size: 1rem;}
-h6 {font-size: 0.75rem;}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  text-transform: capitalize;
+}
 
+h1 {
+  font-size: 3rem;
+}
 
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
 
 //Links
-a:focus, a:active, a:link{
+a:focus, a:active, a:link {
   color: @link;
   text-decoration: none;
 }
+
 a {
   color: @link;
   &:hover {
@@ -51,14 +73,24 @@ a {
 }
 
 //Parallax
-.parallax-container-full{ height: 100vh;}
-.parallax-container { height: 300px; }
-.parallax-container-featured { height: 300px; }
+.parallax-container-full {
+  height: 100vh;
+}
+
+.parallax-container {
+  height: 300px;
+}
+
+.parallax-container-featured {
+  height: 300px;
+}
+
 .parallax-container-full, .parallax-container, .parallax-container-featured {
   background: @parallax-filter, url('') no-repeat fixed bottom center;
   position: relative;
   overflow: hidden;
 }
+
 .parallax {
   position: absolute;
   top: 0;
@@ -80,7 +112,6 @@ a {
   }
 }
 
-
 //General Styles
 button {
   .radius(3px);
@@ -88,42 +119,55 @@ button {
   color: @button-text;
   background-color: @button-background;
   border-color: @button-border;
-  &:hover {background-color: darken(@button-background, 10%);}
+  &:hover {
+	background-color: darken(@button-background, 10%);
+  }
 
-  &.full-width {width: 100%;}
+  &.full-width {
+	width: 100%;
+  }
 
   &.btn-danger {
 	color: @button-danger-text;
 	background-color: @button-danger-background;
 	border-color: @button-danger-border;
-	&:hover {background-color: darken(@button-danger-background, 10%);}
+	&:hover {
+	  background-color: darken(@button-danger-background, 10%);
+	}
   }
   &.btn-info {
 	color: @button-info-text;
 	background-color: @button-info-background;
 	border-color: @button-info-border;
-	&:hover {background-color: darken(@button-info-background, 10%);}
+	&:hover {
+	  background-color: darken(@button-info-background, 10%);
+	}
   }
   &.btn-warning {
 	color: @button-warning-text;
 	background-color: @button-warning-background;
 	border-color: @button-warning-border;
-	&:hover {background-color: darken(@button-warning-background, 10%);}
+	&:hover {
+	  background-color: darken(@button-warning-background, 10%);
+	}
   }
   &.btn-primary {
 	color: @button-primary-text;
 	background-color: @button-primary-background;
 	border-color: @button-primary-border;
-	&:hover {background-color: darken(@button-primary-background, 10%);}
+	&:hover {
+	  background-color: darken(@button-primary-background, 10%);
+	}
   }
   &.btn-success {
 	color: @button-success-text;
 	background-color: @button-success-background;
 	border-color: @button-success-border;
-	&:hover {background-color: darken(@button-success-background, 10%);}
+	&:hover {
+	  background-color: darken(@button-success-background, 10%);
+	}
   }
 }
-
 
 /*********************************************************************
 *						 Footer Social Icons
@@ -131,160 +175,159 @@ button {
 .social-links {
   text-align: center;
   a {
-    border: 1px solid #000;
-    border-radius: 60px;
-    display: inline-block;
-    font-size: 1.5rem;
-    height: 2.5rem;
-    line-height: 1.75rem;
-    margin-bottom: 1rem;
-    margin-right: 5px;
-    position: relative;
-    text-align: center;
-    width: 2.5rem;
-    -webkit-transition: border-color .2s ease-in,color .1s ease-in,background-color .2s ease-in;
-    -moz-transition: border-color .2s ease-in,color .1s ease-in,background-color .2s ease-in;
-    transition: border-color .2s ease-in,color .1s ease-in,background-color .2s ease-in;
+	border: 1px solid #000;
+	border-radius: 60px;
+	display: inline-block;
+	font-size: 1.5rem;
+	height: 2.5rem;
+	line-height: 1.75rem;
+	margin-bottom: 1rem;
+	margin-right: 5px;
+	position: relative;
+	text-align: center;
+	width: 2.5rem;
+	-webkit-transition: border-color .2s ease-in, color .1s ease-in, background-color .2s ease-in;
+	-moz-transition: border-color .2s ease-in, color .1s ease-in, background-color .2s ease-in;
+	transition: border-color .2s ease-in, color .1s ease-in, background-color .2s ease-in;
 
-    i {vertical-align: -5px;}
+	i {
+	  vertical-align: -5px;
+	}
   }
 
   .facebook {
-    background-color: @facebook-background;
-    border: 1px solid @facebook-border;
-    color: @facebook-icon;
-    &:hover {
-      background-color: @facebook-background-hover;
-      i {
-        color: @facebook-icon-hover;
-      }
-    }
+	background-color: @facebook-background;
+	border: 1px solid @facebook-border;
+	color: @facebook-icon;
+	&:hover {
+	  background-color: @facebook-background-hover;
+	  i {
+		color: @facebook-icon-hover;
+	  }
+	}
   }
   .google {
-    background-color: @google-background;
-    border: 1px solid @googlegoogle-border;
-    color: @google-icon;
-    &:hover {
-      background-color: @google-background-hover;
-      i {
-        color: @google-icon-hover;
-      }
-    }
+	background-color: @google-background;
+	border: 1px solid @googlegoogle-border;
+	color: @google-icon;
+	&:hover {
+	  background-color: @google-background-hover;
+	  i {
+		color: @google-icon-hover;
+	  }
+	}
   }
   .twitter {
-    background-color: @twitter-background;
-    border: 1px solid @twitter-border;
-    color: @twitter-icon;
-    &:hover {
-      background-color: @twitter-background-hover;
-      i {
-        color: @twitter-icon-hover;
-      }
-    }
+	background-color: @twitter-background;
+	border: 1px solid @twitter-border;
+	color: @twitter-icon;
+	&:hover {
+	  background-color: @twitter-background-hover;
+	  i {
+		color: @twitter-icon-hover;
+	  }
+	}
   }
   .dribbble {
-    background-color: @dribbble-background;
-    border: 1px solid @dribbble-border;
-    color: @dribbble-icon;
-    &:hover {
-      background-color: @dribbble-background-hover;
-      i {
-        color: @dribbble-icon-hover;
-      }
-    }
+	background-color: @dribbble-background;
+	border: 1px solid @dribbble-border;
+	color: @dribbble-icon;
+	&:hover {
+	  background-color: @dribbble-background-hover;
+	  i {
+		color: @dribbble-icon-hover;
+	  }
+	}
   }
   .instagram {
-    background-color: @instagram-background;
-    border: 1px solid @instagram-border;
-    color: @instagram-icon;
-    &:hover {
-      background-color: @instagram-background-hover;
-      i {
-        color: @instagram-icon-hover;
-      }
-    }
+	background-color: @instagram-background;
+	border: 1px solid @instagram-border;
+	color: @instagram-icon;
+	&:hover {
+	  background-color: @instagram-background-hover;
+	  i {
+		color: @instagram-icon-hover;
+	  }
+	}
   }
   .github {
-    background-color: @github-background;
-    border: 1px solid @github-border;
-    color: @github-icon;
-    &:hover {
-      background-color: @github-background-hover;
-      i {
-        color: @github-icon-hover;
-      }
-    }
+	background-color: @github-background;
+	border: 1px solid @github-border;
+	color: @github-icon;
+	&:hover {
+	  background-color: @github-background-hover;
+	  i {
+		color: @github-icon-hover;
+	  }
+	}
   }
   .youtube {
-    background-color: @youtube-background;
-    border: 1px solid @youtube-border;
-    color: @youtube-icon;
-    &:hover {
-      background-color: @youtube-background-hover;
-      i {
-        color: @youtube-icon-hover;
-      }
-    }
+	background-color: @youtube-background;
+	border: 1px solid @youtube-border;
+	color: @youtube-icon;
+	&:hover {
+	  background-color: @youtube-background-hover;
+	  i {
+		color: @youtube-icon-hover;
+	  }
+	}
   }
   .pinterest {
-    background-color: @pinterest-background;
-    border: 1px solid @pinterest-border;
-    color: @pinterest-icon;
-    &:hover {
-      background-color: @pinterest-background-hover;
-      i {
-        color: @pinterest-icon-hover;
-      }
-    }
+	background-color: @pinterest-background;
+	border: 1px solid @pinterest-border;
+	color: @pinterest-icon;
+	&:hover {
+	  background-color: @pinterest-background-hover;
+	  i {
+		color: @pinterest-icon-hover;
+	  }
+	}
   }
   .linkedin {
-    background-color: @linkedin-background;
-    border: 1px solid @linkedin-border;
-    color: @linkedin-icon;
-    &:hover {
-      background-color: @linkedin-background-hover;
-      i {
-        color: @linkedin-icon-hover;
-      }
-    }
+	background-color: @linkedin-background;
+	border: 1px solid @linkedin-border;
+	color: @linkedin-icon;
+	&:hover {
+	  background-color: @linkedin-background-hover;
+	  i {
+		color: @linkedin-icon-hover;
+	  }
+	}
   }
   .skype {
-    background-color: @skype-background;
-    border: 1px solid @skype-border;
-    color: @skype-icon;
-    &:hover {
-      background-color: @skype-background-hover;
-      i {
-        color: @skype-icon-hover;
-      }
-    }
+	background-color: @skype-background;
+	border: 1px solid @skype-border;
+	color: @skype-icon;
+	&:hover {
+	  background-color: @skype-background-hover;
+	  i {
+		color: @skype-icon-hover;
+	  }
+	}
   }
   .tumblr {
-    background-color: @tumblr-background;
-    border: 1px solid @tumblr-border;
-    color: @tumblr-icon;
-    &:hover {
-      background-color: @tumblr-background-hover;
-      i {
-        color: @tumblr-icon-hover;
-      }
-    }
+	background-color: @tumblr-background;
+	border: 1px solid @tumblr-border;
+	color: @tumblr-icon;
+	&:hover {
+	  background-color: @tumblr-background-hover;
+	  i {
+		color: @tumblr-icon-hover;
+	  }
+	}
   }
   .rss {
-    background-color: @rss-background;
-    border: 1px solid @rss-border;
-    color: @rss-icon;
-    &:hover {
-      background-color: @rss-background-hover;
-      i {
-        color: @rss-icon-hover;
-      }
-    }
+	background-color: @rss-background;
+	border: 1px solid @rss-border;
+	color: @rss-icon;
+	&:hover {
+	  background-color: @rss-background-hover;
+	  i {
+		color: @rss-icon-hover;
+	  }
+	}
   }
 }
-
-
-
 
 /*********************************************************************
 *							General Styles
@@ -297,8 +340,12 @@ pre {
   font-size: 0.85rem;
   line-height: 1.5;
 
-  code {background-color: inherit; color: inherit;
-    &.hljs {background-color: inherit;}
+  code {
+	background-color: inherit;
+	color: inherit;
+	&.hljs {
+	  background-color: inherit;
+	}
   }
 }
 
@@ -316,7 +363,9 @@ blockquote {
   padding: 12px 24px;
 }
 
-i, em {font-style: italic;}
+i, em {
+  font-style: italic;
+}
 
 .input, input[type="email"],
 input[type="number"], input[type="password"],
